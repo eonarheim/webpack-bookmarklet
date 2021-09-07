@@ -1,0 +1,17 @@
+{
+  "name": "yt-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bookmarklet.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Erik Onarheim",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "css-loader": "6.2.0",
+    "url-loader": "4.1.1",
+    "webpack": "5.51.1",
+    "webpack-cli": "4.8.0"
+  }
+}
