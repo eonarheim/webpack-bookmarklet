@@ -28,3 +28,20 @@ var removeVids = function () {
     }, 500);
 }; 
 removeVids();
+
+var clickToRemove = function() {
+    document.addEventListener('keydown', (ev) => {
+        if (ev.code === "KeyD") {
+            var vid = document.querySelector('ytd-playlist-video-renderer:hover');
+            vid.querySelector('yt-icon-button.ytd-menu-renderer').click();
+            var title = vid.querySelector('#video-title');
+            console.log('Removed:', title.innerText, title.href);
+            setTimeout(() => {
+                var removeResults = document.evaluate("//span[contains(., 'Remove from')]", document, null, XPathResult.ANY_TYPE, null);
+                var removeText = removeResults.iterateNext();
+                removeText.click();
+            });
+        }
+    })
+}
+clickToRemove();
